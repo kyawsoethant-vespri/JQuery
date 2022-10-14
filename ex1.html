@@ -14,13 +14,20 @@
 <script src="./jquery.min.js"></script>
 
 <script>
-    $("#heading").html("Welcome From JQuery");
+    // $("#heading").html("Welcome From JQuery");
 
-    $("#heading").click(function(){
-        $(this).hide(3000,function(){
-            console.log("Hello welcome from code lab!");
+    // $("#heading").click(function(){
+    //     $(this).hide(3000,function(){
+    //         console.log("Hello");
+    //     });
+    // });
+
+    $(document).ready(() => {
+        $("#heading").dblclick(function() {
+            $(this).css("color","red");
         });
     });
+
 </script>
 
 

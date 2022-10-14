@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+
+    <style>
+
+        #btnAnimation{
+            margin-left: 10px;
+            margin-top: 20px;
+        }
+
+        .box{
+            background-color: black;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 5px solid red;
+            margin-top: 20px;
+            position: relative;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <button id="btnAnimation">Animation</button>
+        <button id="stopBtn">Stop</Button>
+        <button class="chainingBtn">Chaining</button>
+        <div class="box"></div>
+    </div>
+
+    <h1 class="codelab">Code Lab</h1>
+    
+
+</body>
+
+<script src="./jquery.min.js"></script>
+
+<script>
+
+    $(document).ready(function(){
+        $("#btnAnimation").click(function(){
+            $(".box").animate({
+                left : "300px",
+                top : "200px",
+                width : "+=100px",
+                height : "+=100px",
+
+            },5000, function(){
+                console.log("Hello World");
+            });
+        });
+
+        $("#stopBtn").click(function(){
+            $(".box").stop();
+        });
+
+        $(".chainingBtn").click(function(){
+            $(".codelab").css("color","red").hide(2000).show(2000);
+        });
+    });
+
+</script>
+
+</html>

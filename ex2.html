@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <style>
+
+        img{
+            width: 400px;
+            padding-left: 20px;
+        }
+
+        .container{
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+
+        img{
+            display: none;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <button id="showBtn" class="btn btn-primary">Show</button>
+        <button id="hideBtn" class="btn btn-danger">Hide</button>
+        <button id="toggleBtn" class="btn btn-dark">Toggle</button>
+    </div>
+
+    <img src="./photo1.jpeg" id="myImg">
+    
+</body>
+
+<script src="./jquery.min.js"></script>
+
+<script>
+
+    $(document).ready(function(){
+        $("#showBtn").click(function(){
+            $("#myImg").show(1000);
+        });
+
+        $("#hideBtn").click(function(){
+            $("#myImg").hide(1000);
+        });
+
+        $("#toggleBtn").click(function(){
+            $("#myImg").toggle(1000);
+        });
+    });
+   
+</script>
+</html>
